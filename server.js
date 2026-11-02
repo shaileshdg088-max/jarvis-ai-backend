@@ -4,6 +4,7 @@ import rateLimit from "express-rate-limit";
 import OpenAI from "openai";
 
 const app = express();
+app.set("trust proxy", 1);
 const port = process.env.PORT || 10000;
 
 app.use(cors({
